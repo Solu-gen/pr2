@@ -1,143 +1,227 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>РЕВО Кофе</title>
+    <link rel="icon" href="assets/LOGO.png" type="image/x-icon ">
+    <!-- Подключение шрифтов -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Подключение стилей - Вариант А: БЭМ -->
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="icon" href="assets/icons/IC_coffee.png" type="image/x-icon">
 </head>
+
 <body>
-    <header>
-        <div>
-            <h1>ВАШ ЛИЧНЫЙ КОФЕ</h1>
-            <img src="assets/img/banner.png" alt="Баннер с кофе на главной странице.">
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="#" class="header__logo"><img src="assets/LOGO.png" alt="Логотип"></a>
+                <nav class="header__nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a class="nav__link active" href="#home">ГЛАВНАЯ</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link active" href="#coffee">КАТАЛОГ КОФЕ</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link active" href="#giftsets">ПОДАРОЧНЫЕ НАБОРЫ</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link active" href="#introsets">ОЗНАКОМИТЕЛЬНЫЕ НАБОРЫ</a>
+                        </li>
+                    </ul>
+                </nav>
+                <button class="btn btn--primary header__cta">Корзина</button>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#home">ГЛАВНАЯ</a></li>
-                <li><a href="#coffee">КАТАЛОГ КОФЕ</a></li>
-                <li><a href="#giftsets">ПОДАРОЧНЫЕ НАБОРЫ</a></li>
-                <li><a href="#introsets">ОЗНАКОМИТЕЛЬНЫЕ НАБОРЫ</a></li>
-            </ul>
-        </nav>
     </header>
 
     <main>
-        <section id="home">
-            <h3>Ваш личный кофе</h3>
-            <h2>КОФЕ - ЭТО БАЗА</h2>
-            
-            <section>
-                <img src="assets/icons/ic.png" alt="Дом кофе">
-                <h4>Происхождение</h4>
-                <p>Однозначно, действия представителей оппозиции будут призваны к&nbsp;ответу. С&nbsp;другой стороны, синтетическое тестирование не&nbsp;оставляет шанса для переосмысления внешнеэкономических политик.</p>
-            </section>
-            
-            <section>
-                <img src="assets/icons/IC_(1).png" alt="Вывеска с кофе">
-                <h4>Качество</h4>
-                <p>Прежде всего, синтетическое тестирование в&nbsp;значительной степени обусловливает важность соответствующих условий активизации. Но&nbsp;предприниматели в&nbsp;сети интернет лишь добавляют фракционных разногласий и&nbsp;объявлены нарушающими общечеловеческие нормы этики и&nbsp;морали.</p>
-            </section>
-            
-            <section>
-                <img src="assets/icons/IC_(2).png" alt="Зерна">
-                <h4>Зерна</h4>
-                <p>Безусловно, курс на&nbsp;социально-ориентированный национальный проект предоставляет широкие возможности для системы массового участия. Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что понимание сути ресурсосберегающих технологий требует определения и&nbsp;уточнения существующих финансовых и&nbsp;административных условий.</p>
-            </section>
-            
-            <section>
-                <img src="assets/icons/IC_(3).png" alt="Кофемашина">
-                <h4>Подготовка</h4>
-                <p>Не&nbsp;следует, однако, забывать, что постоянное информационно-пропагандистское обеспечение нашей деятельности требует анализа своевременного выполнения сверхзадачи. Равным образом, новая модель организационной деятельности требует анализа как самодостаточных, так и&nbsp;внешне зависимых концептуальных решений.</p>
-            </section>
-            
+        <div class="start_layout">
+            <h1>ВАШ <span class="highlight">ЛИЧНЫЙ</span> КОФЕ</h1>
+            <img src="assets/img/banner.png" alt="Баннер с кофе на главной странице." class="banner">
+        </div>
+        <section id="home" class="home__container">
+            <div class="h__title">
+                <h3>Ваш личный кофе</h3>
+                <h2>КОФЕ - ЭТО БАЗА</h2>
+            </div>  
+            <div class="home__list">
+                <section class="home__items">
+                    <img src="assets/icons/ic.png" alt="Дом кофе">
+                    <h4>Происхождение</h4>
+                    <p>Однозначно, действия представителей оппозиции будут призваны к&nbsp;ответу.</p>
+                </section>
+                
+                <section class="home__items">
+                    <img src="assets/icons/IC_(1).png" alt="Вывеска с кофе">
+                    <h4>Качество</h4>
+                    <p>С&nbsp;другой стороны, тестирование не&nbsp;оставляет шанса для переосмысления.</p>
+                </section>
+                
+                <section class="home__items">
+                    <img src="assets/icons/IC_(2).png" alt="Зерна">
+                    <h4>Зерна</h4>
+                    <p>Безусловно, курс на&nbsp;социальный  проект предоставляет широкие возможности.</p>
+                </section>
+                
+                <section class="home__items">
+                    <img src="assets/icons/IC_(3).png" alt="Кофемашина">
+                    <h4>Подготовка</h4>
+                    <p>Равным образом, новая модель деятельности требует анализа решений.</p>
+                </section>
+            </div>
         </section>
 
         <section id="coffee">
-            <h3>Выбери свой любимый</h3>
-            <h2>КАТАЛОГ КОФЕ</h2>
+            <div class="color__block coffee-block"></div>
+            <div class="h__title">
+                <h3>Выбери свой любимый</h3>
+                <h2>КАТАЛОГ КОФЕ</h2>   
+            </div>
             
-            <article>
-                <img src="assets/img/IMAGE.png" alt="Кофе 1">
-                <p>Цена: 99.000</p>
-                <h4>Для кофемашины</h4>
-                <p>С&nbsp;учётом сложившейся международной обстановки, постоянное информационно-пропагандистское обеспечение нашей деятельности предопределяет высокую востребованность прогресса профессионального сообщества.</p>
-                <p>КУПИТЬ СЕЙЧАС</p>
-                <p>В корзину</p>
-            </article>
+            <section class="cards"> 
+                <article class="card"> 
+                    <img src="assets/img/IMAGE.png" alt="Кофе 1">
+                    <div class="card__content">
+                        <p class="cost__text">Цена: 99.000</p>
+                        <h4 class="card__title">Для кофемашины</h4>
+                        <p>Сладкий кофе с&nbsp;нотами орехов и&nbsp;изюма</p>
+                        <div class="card__button-buy">
+                            <button class="btn btn--primary buy__cta">КУПИТЬ</button>
+                            <a class="nav__link active" href="#">В корзину</a>
+                        </div>
+                    </div>  
+                </article>
 
-            <article>
-                <img src="assets/img/image_(1).png" alt="Кофе 2">
-                <p>Цена: 139.000</p>
-                <h4>Для турки</h4>
-                <p>Как принято считать, акционеры крупнейших компаний представлены в&nbsp;исключительно положительном свете.</p>
-                <p>КУПИТЬ СЕЙЧАС</p>
-                <p>В корзину</p>
-            </article>            
+                <article class="card"> 
+                    <img src="assets/img/image_(1).png" alt="Кофе 2" style="background: #EDF0F5;">
+                    <div class="card__content">
+                        <p class="cost__text">Цена: 139.000</p>
+                        <h4 class="card__title">Для турки</h4>
+                        <p>Плотный кофе с&nbsp;нотами ягод и&nbsp;печенья</p>
+                        <div class="card__button-buy">
+                            <button class="btn btn--primary buy__cta">КУПИТЬ</button>
+                            <a class="nav__link active" href="#">В корзину</a>
+                        </div>
+                    </div>
+                </article>
+        
+                <article class="card"> 
+                    <img src="assets/img/IMAGE_(2).png" alt="Кофе 3">
+                    <div class="card__content">
+                        <p class="cost__text">Цена: 85.000</p>
+                        <h4 class="card__title">В зернах</h4>
+                        <p>Сладкий кофе с&nbsp;нотами какао и&nbsp;лимона</p>
+                        <div class="card__button-buy">
+                            <button class="btn btn--primary buy__cta">КУПИТЬ</button>
+                            <a class="nav__link active" href="#">В корзину</a>
+                        </div>
+                    </div>
+                </article>
 
-            <article>
-                <img src="assets/img/IMAGE_(2).png" alt="Кофе 3">
-                <p>Цена: 85.000</p>
-                <h4>В зернах</h4>
-                <p>Предварительные выводы неутешительны: существующая теория позволяет выполнить важные задания по&nbsp;разработке своевременного выполнения сверхзадачи.</p>
-                <p>КУПИТЬ СЕЙЧАС</p>
-                <p>В корзину</p>
-            </article> 
-
-            
-            <article>
-                <img src="assets/img/IMAGE_(3).png" alt="Кофе 4">
-                <p>Цена: 85.000</p>
-                <h4>Молотый кофе</h4>
-                <p>Значимость этих проблем настолько очевидна, что разбавленное изрядной долей эмпатии, рациональное мышление предполагает независимые способы реализации существующих финансовых и&nbsp;административных условий.</p>
-                <p>КУПИТЬ СЕЙЧАС</p>
-                <p>В корзину</p>
-            </article>   
+                <article class="card"> 
+                    <img src="assets/img/IMAGE_(3).png" alt="Кофе 4">
+                    <div class="card__content">
+                        <p class="cost__text">Цена: 85.000</p>
+                        <h4 class="card__title">Молотый кофе</h4>
+                        <p>Плотный кофе с&nbsp;нотами печенья и&nbsp;нуги</p>
+                        <div class="card__button-buy">
+                            <button class="btn btn--primary buy__cta">КУПИТЬ</button>
+                            <a class="nav__link active" href="#">В корзину</a>
+                        </div>
+                    </div>
+                </article>
+            </section>
         </section>
 
-        <section id="giftsets">
-            <h3>Лучший Подарок для Лучшего Друга</h3>
-            <h2>ПОДАРОЧНЫЕ НАБОРЫ</h2>
-            <img src="assets/img/pr-0018-r.png" alt="Подарочный набор">
-            <h3>Подарочный набор &laquo;Рево&nbsp;&mdash; розовый слоник&raquo;</h3>
-            <p>Наше дело не&nbsp;так однозначно, как может показаться: высокое качество позиционных исследований предоставляет широкие возможности для модели развития. Наше дело не&nbsp;так однозначно, как может показаться: разбавленное изрядной долей эмпатии, рациональное мышление, в&nbsp;своём классическом представлении, допускает внедрение инновационных методов управления процессами.</p>
-            <img src="assets/icons/IC_coffee.png" alt="Зерна кофе">
-            <p>100+ комбинаций</p>
-            <img src="assets/icons/IC_Mountain.png" alt="Горы">
-            <p>Из разных уголков планеты</p>
-            <p>КУПИТЬ СЕЙЧАС</p>
-            <p>В корзину</p>
+        <section id="giftsets"> 
+            <div class="color__block giftset-block"></div>
+            <div class="h__title">
+                <h3>Лучший Подарок для Лучшего Друга</h3>
+                <h2>ПОДАРОЧНЫЕ НАБОРЫ</h2>
+            </div>
+            <article class="giftset__container">
+                <img src="assets/img/pr-0018-r.png" alt="Подарочный набор" class="giftset__img">
+                <div class="card__content giftset__content">
+                    <div class="giftset__content-group">
+                        <p class="cost__text">Цена: 285.000</p>
+                        <h3 class="card__title">Подарочный набор &laquo;Рево&nbsp;&mdash; розовый слоник&raquo;</h3>
+                        <p>Наше дело не&nbsp;так однозначно, как может показаться: высокое качество позиционных исследований предоставляет широкие возможности для модели развития. Наше дело не&nbsp;так однозначно, как может показаться: разбавленное изрядной долей эмпатии, рациональное мышление, в&nbsp;своём классическом представлении, допускает внедрение инновационных методов управления процессами.</p>
+                        <div class="icons__group">
+                            <div class="icons-items">
+                                <img src="assets/icons/IC_coffee.png" alt="Зерна кофе">
+                                <p class="items__h">50+ комбинаций</p>
+                            </div>
+                            <div class="icons-items">
+                                <img src="assets/icons/IC_Mountain.png" alt="Горы">
+                                <p class="items__h">Из разных уголков планеты</p>
+                            </div>
+                        </div>
+                        <div class="card__button-buy">
+                            <button class="btn btn--primary buy__cta">КУПИТЬ</button>
+                            <a class="nav__link active" href="#">В корзину</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="giftsets__numbers">
+                    <a class="giftsets__number giftsets__number-active">1</a>
+                    <a class="giftsets__number">2</a>
+                    <a class="giftsets__number">3</a>
+                </div> 
+            </article>
+            
         </section>
 
         <section id="introsets">
-            <h2>ОЗНАКОМИТЕЛЬНЫЕ НАБОРЫ</h2>
-            <article>
-                <img src="assets/img/image_(6).png" alt="Кофе 2">
-                <p>Цена: 147.000</p>
-                <h4>На каждый день</h4>
-                <p>Как принято считать, акционеры крупнейших компаний представлены в&nbsp;исключительно положительном свете.</p>
-                <p>КУПИТЬ СЕЙЧАС</p>
-                <p>В корзину</p>
-            </article>            
+            <div class="color__block introset-block"></div>
+            <h2 class="h__title">ОЗНАКОМИТЕЛЬНЫЕ НАБОРЫ</h2>
+            <section class="cards">    
+                <article class="card-introsets">
+                    <img src="assets/img/image_(6).png" alt="Набор 1" style="background: #EDF0F5;">
+                    <div class="introsets__card-items">
+                        <p class="cost__text">Цена: 147.000</p>
+                        <h4 class="card__title">На каждый день</h4>
+                        <p>Как принято считать, акционеры  компаний представлены в&nbsp;исключительно хорошем свете.</p>
+                        <div class="card__button-buy">
+                            <button class="btn btn--primary buy__cta">КУПИТЬ</button>
+                            <a class="nav__link active" href="#">В корзину</a>
+                        </div>
+                    </div>
+                </article>            
 
-            <article>
-                <img src="assets/img/image_(7).png" alt="Кофе 3">
-                <p>Цена: 156.000</p>
-                <h4>Для праздника</h4>
-                <p>Предварительные выводы неутешительны: существующая теория позволяет выполнить важные задания по&nbsp;разработке своевременного выполнения сверхзадачи.</p>
-                <p>КУПИТЬ СЕЙЧАС</p>
-                <p>В корзину</p>
-            </article> 
+                <article class="card-introsets">
+                    <img src="assets/img/image_(7).png" alt="Набор 2" style="background: #EDF0F5;">
+                    <div class="introsets__card-items">
+                        <p class="cost__text">Цена: 156.000</p>
+                        <h4 class="card__title">Для праздника</h4>
+                        <p>Предварительные выводы неутешительны: теория позволяет выполнить задания по&nbsp;разработке.</p>
+                        <div class="card__button-buy">
+                            <button class="btn btn--primary buy__cta">КУПИТЬ</button>
+                            <a class="nav__link active" href="#">В корзину</a>
+                        </div>
+                    </div>
+                    
+                </article> 
 
+                <article class="card-introsets">
+                    <img src="assets/img/image_(8).png" alt="Набор 3" style="background: #EDF0F5;">
+                    <div class="introsets__card-items">
+                        <p class="cost__text">Цена: 275.000</p>
+                        <h4 class="card__title">Собери сам</h4>
+                        <p>С&nbsp;другой стороны, тестирование не&nbsp;оставляет шанса для переосмысления внешних политик.</p>
+                        <div class="card__button-buy">
+                            <button class="btn btn--primary buy__cta">КУПИТЬ</button>
+                            <a class="nav__link active" href="#">В корзину</a>
+                        </div>
+                    </div>
+                    
+                </article>
+            </section>
             
-            <article>
-                <img src="assets/img/image_(8).png" alt="Кофе 4">
-                <p>Цена: 275.000</p>
-                <h4>Собери сам</h4>
-                <p>Однозначно, действия представителей оппозиции будут призваны к&nbsp;ответу. С&nbsp;другой стороны, синтетическое тестирование не&nbsp;оставляет шанса для переосмысления внешнеэкономических политик.</p>
-                <p>КУПИТЬ СЕЙЧАС</p>
-                <p>В корзину</p>
-            </article>
         </section>
     </main>
 
