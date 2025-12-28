@@ -1,0 +1,256 @@
+/* Планшет (1024px и меньше) */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .header__inner {
+        padding: 15px 0;
+    }
+
+    .nav__list {
+        gap: 20px;
+    }
+
+    .header__cta {
+        display: none;
+        /* Скрываем CTA на планшетах */
+    }
+}
+
+@media (max-width: 800px) {
+    .giftset__content {
+        margin-left: 20%;
+        padding: 2rem;
+        background: white;
+        display: flex;
+    }
+}
+
+/* Планшет и мобильные (768px и меньше) */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+        /* Показываем гамбургер */
+    }
+
+    /* Основная навигация (скрыта по умолчанию) */
+    .header__nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.75);
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        padding: 80px 30px 30px;
+        transition: right 0.4s ease;
+        z-index: 1000;
+        overflow-y: auto;
+    }
+
+    .header__nav.active {
+        right: 0;
+    }
+
+    .nav__list {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .nav__item {
+        width: 100%;
+    }
+
+    .nav__link {
+        display: block;
+        width: 100%;
+        padding: 15px 0;
+        font-size: 18px;
+        /* Увеличиваем для мобильных */
+        border-bottom: 1px solid #eee;
+    }
+
+    .nav__link:hover,
+    .nav__link.active {
+        background: transparent;
+        color: var(--primary-color);
+        padding-left: 10px;
+    }
+
+    /* Затемнение фона при открытом меню */
+    .nav-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+
+    .nav-overlay.active {
+        display: block;
+    }
+
+    /* Увеличиваем touch-зоны */
+    .btn {
+        min-width: 120px;
+    }
+
+    .scroll-top {
+        width: 52px;
+        height: 52px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 22px;
+    }
+
+    .header {
+        position: sticky;
+    }
+    .giftset__container {
+        padding: 0 0 3.125rem 0;
+        /*height: 50%;
+        height: min-content;*/
+        width: 100%;
+        display: grid;
+        grid-template-rows: auto;
+        justify-items: center;
+        
+    }
+
+    .giftset__img {
+        /*align-self: center;
+        position: absolute;
+        
+        z-index: 1;
+        /*left: 8%;*/
+        position: relative;
+        max-width: 50vw;
+    }
+
+    .giftset__content {
+        /*max-height: 57vh;*/
+        margin-left: 0;
+    }
+
+    .giftset__content-group {
+        margin-left: 0;
+    }
+
+    .giftsets__numbers {
+        /*display: flex;
+        flex-direction: column; 
+        justify-content: space-between; 
+        align-items: center;*/
+        /*height: 100%;*/
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: none;
+        /*justify-items: stretch;
+        justify-content: stretch;
+        align-items: stretch;*/
+    }
+
+    .giftsets__number {
+        padding: 1rem 0;
+        display: grid;
+        text-align: center;
+        /*align-items: center;
+        justify-items: center;
+        justify-content: center;
+        align-self: center;
+        justify-self: center;*/
+
+        /*color: #c1c4c9;
+        font-weight: 800;
+        font-size: 1.75rem;
+        border: 2px solid var(--secondary-color);*/
+    }
+}
+
+@media (max-width: 660px) {
+    .home__list {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .cards__coffee {
+        /*max-width: 21.8rem;
+        flex-direction: column;
+        background-color: var(--secondary-color);*/
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .card {
+        width: auto ;
+        flex-direction: column;
+        /*justify-items: center;
+        align-items: center;
+        justify-content: center;*/
+        background: linear-gradient(to bottom, var(--secondary-color) 0%, white 50%);
+    }
+    .card__content {
+        padding: 2rem;
+    }
+    .card .card__button-buy {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Мобильные (480px и меньше) */
+@media (max-width: 480px) {
+    .header__nav {
+        width: 100%;
+    }
+
+    .header__logo img {
+        width: 100px;
+        height: auto;
+    }
+
+    body {
+        font-size: 17px;
+        /* iOS рекомендация */
+    }
+    #home, #coffee, #giftsets, #introsets {
+        padding: 0rem 2rem;
+    }
+    .home__list, .cards {
+        padding-bottom: 2rem;
+    }
+    .h__title {
+        padding: 2rem 0 1.2rem 0;
+    }
+    .cards {
+        justify-content: center;
+    }
+    .cards__coffee {
+        display: flex;
+        gap: 1.5rem;
+        /*flex-wrap: wrap;*/
+        justify-items: center;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        width: 21.8rem;
+    }
+    .card {
+        width: auto;
+        justify-items: center;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        /*flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        justify-content: center;*/
+        background: linear-gradient(to bottom, var(--secondary-color) 0%, white 50%);
+    }
+    .card__content {
+        padding: 1.5rem;
+    }
+}

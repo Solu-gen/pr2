@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>РЕВО Кофе</title>
     <link rel="icon" href="assets/LOGO.png" type="image/x-icon">
+    <link rel="icon" href="assets/icons/IC_coffee.png" type="image/x-icon">    
     <!-- Подключение шрифтов -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- Подключение стилей - Вариант А: БЭМ -->
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="icon" href="assets/icons/IC_coffee.png" type="image/x-icon">
+    <!-- Мобильные стили -->
+    <link rel="stylesheet" href="styles/mobile.css" media="screen and (max-width: 1024px)">
 </head>
 
 <body>
@@ -25,7 +27,7 @@
                     <span class="menu-toggle__line"></span>
                 </button>
 
-                <nav class="header__nav">
+                <nav class="header__nav" id="mainNav">
                     <ul class="nav__list">
                         <li class="nav__item">
                             <a class="nav__link active" href="#home">ГЛАВНАЯ</a>
@@ -47,15 +49,16 @@
     </header>
 
     <main>
-        <div class="start_layout">
-            <h1>ВАШ <span class="highlight">ЛИЧНЫЙ</span> КОФЕ</h1>
+        <section class="start_layout">
+            <h1>ВАШ<span class="highlight">ЛИЧНЫЙ</span>КОФЕ</h1>
             <img src="assets/img/banner.png" alt="Баннер с кофе на главной странице." class="banner">
-        </div>
+        </section>
         <section id="home">
             <div class="h__title">
                 <h3>Ваш личный кофе</h3>
                 <h2>КОФЕ - ЭТО БАЗА</h2>
             </div>  
+            <!-- Шаг 3: Создание Grid-сетки для контентных блоков -->
             <div class="home__list">
                 <section class="home__items">
                     <img src="assets/icons/ic.png" alt="Дом кофе">
@@ -84,12 +87,11 @@
         </section>
 
         <section id="coffee">
-            <div class="color__block coffee-block"></div>
             <div class="h__title">
                 <h3>Выбери свой любимый</h3>
                 <h2>КАТАЛОГ КОФЕ</h2>   
             </div>
-            <div class="cards"> 
+            <div class="cards cards__coffee"> 
                 <article class="card"> 
                     <img src="assets/img/IMAGE.png" alt="Кофе 1">
                     <div class="card__content">
@@ -98,33 +100,33 @@
                         <p>Сладкий кофе с&nbsp;нотами орехов и&nbsp;изюма</p>
                         <div class="card__button-buy">
                             <button class="btn btn--primary buy__cta">КУПИТЬ</button>
-                            <a class="nav__link active" href="#">В корзину</a>
+                            <a class="shopping--busket" href="#">В корзину</a>
                         </div>
                     </div>  
                 </article>
 
                 <article class="card"> 
-                    <img src="assets/img/image_(1).png" alt="Кофе 2" style="background: #EDF0F5;">
+                    <img src="assets/img/image_(1).png" alt="Кофе 2">
                     <div class="card__content">
                         <p class="cost__text">Цена: 139.000</p>
                         <h4 class="card__title">Для турки</h4>
                         <p>Плотный кофе с&nbsp;нотами ягод и&nbsp;печенья</p>
                         <div class="card__button-buy">
                             <button class="btn btn--primary buy__cta">КУПИТЬ</button>
-                            <a class="nav__link active" href="#">В корзину</a>
+                            <a class="shopping--busket" href="#">В корзину</a>
                         </div>
                     </div>
                 </article>
         
                 <article class="card"> 
-                    <img src="assets/img/IMAGE_(2).png" alt="Кофе 3">
+                    <img src="assets/img/IMAGE_(2).png" alt="Кофе 3" >
                     <div class="card__content">
                         <p class="cost__text">Цена: 85.000</p>
                         <h4 class="card__title">В зернах</h4>
                         <p>Сладкий кофе с&nbsp;нотами какао и&nbsp;лимона</p>
                         <div class="card__button-buy">
                             <button class="btn btn--primary buy__cta">КУПИТЬ</button>
-                            <a class="nav__link active" href="#">В корзину</a>
+                            <a class="shopping--busket" href="#">В корзину</a>
                         </div>
                     </div>
                 </article>
@@ -137,15 +139,14 @@
                         <p>Плотный кофе с&nbsp;нотами печенья и&nbsp;нуги</p>
                         <div class="card__button-buy">
                             <button class="btn btn--primary buy__cta">КУПИТЬ</button>
-                            <a class="nav__link active" href="#">В корзину</a>
+                            <a class="shopping--busket" href="#">В корзину</a>
                         </div>
                     </div>
                 </article>
             </div>
         </section>
 
-        <section id="giftsets"> 
-            <div class="color__block giftset-block"></div>
+        <section id="giftsets">
             <div class="h__title">
                 <h3>Лучший Подарок для Лучшего Друга</h3>
                 <h2>ПОДАРОЧНЫЕ НАБОРЫ</h2>
@@ -169,9 +170,10 @@
                         </div>
                         <div class="card__button-buy">
                             <button class="btn btn--primary buy__cta">КУПИТЬ</button>
-                            <a class="nav__link active" href="#">В корзину</a>
+                            <a class="shopping--busket" href="#">В корзину</a>
                         </div>
                     </div>
+                    
                 </div>
                 <div class="giftsets__numbers">
                     <a class="giftsets__number giftsets__number-active">1</a>
@@ -182,9 +184,11 @@
         </section>
 
         <section id="introsets">
-            <div class="color__block introset-block"></div>
-            <h2 class="h__title">ОЗНАКОМИТЕЛЬНЫЕ НАБОРЫ</h2>
-            <div class="cards">    
+            <div class="h__title">
+                <h3>Ваш личный кофе</h3>
+                <h2>ОЗНАКОМИТЕЛЬНЫЕ НАБОРЫ</h2>
+            </div>
+            <div class="cards cards__introsets">    
                 <article class="card-introsets">
                     <img src="assets/img/image_(6).png" alt="Набор 1" style="background: #EDF0F5;">
                     <div class="introsets__card-items">
@@ -193,7 +197,7 @@
                         <p>Как принято считать, акционеры  компаний представлены в&nbsp;исключительно хорошем свете.</p>
                         <div class="card__button-buy">
                             <button class="btn btn--primary buy__cta">КУПИТЬ</button>
-                            <a class="nav__link active" href="#">В корзину</a>
+                            <a class="shopping--busket" href="#">В корзину</a>
                         </div>
                     </div>
                 </article>            
@@ -206,7 +210,7 @@
                         <p>Предварительные выводы неутешительны: теория позволяет выполнить задания по&nbsp;разработке.</p>
                         <div class="card__button-buy">
                             <button class="btn btn--primary buy__cta">КУПИТЬ</button>
-                            <a class="nav__link active" href="#">В корзину</a>
+                            <a class="shopping--busket" href="#">В корзину</a>
                         </div>
                     </div>
                 </article> 
@@ -219,7 +223,7 @@
                         <p>С&nbsp;другой стороны, тестирование не&nbsp;оставляет шанса для переосмысления внешних политик.</p>
                         <div class="card__button-buy">
                             <button class="btn btn--primary buy__cta">КУПИТЬ</button>
-                            <a class="nav__link active" href="#">В корзину</a>
+                            <a class="shopping--busket" href="#">В корзину</a>
                         </div>
                     </div>
                 </article>
@@ -230,5 +234,80 @@
     <footer>
         <p>&copy; 2025 Сайт. Все права защищены.</p>
     </footer>
+    <button class="scroll-top" id="scrollTop" aria-label="Наверх">
+        ↑
+    </button>
+    <script>
+        // Получаем элементы
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+
+        // Создаем оверлей для меню
+        const navOverlay = document.createElement('div');
+        navOverlay.className = 'nav-overlay';
+        document.body.appendChild(navOverlay);
+
+        // Функция открытия/закрытия меню
+        function toggleMenu() {
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+
+            // Переключаем состояния
+            menuToggle.classList.toggle('active');
+            menuToggle.setAttribute('aria-expanded', !isExpanded);
+            mainNav.classList.toggle('active');
+            navOverlay.classList.toggle('active');
+
+            // Блокируем скролл при открытом меню
+            document.body.style.overflow = mainNav.classList.contains('active') ? 'hidden' : '';
+        }
+
+        // Обработчики событий
+        menuToggle.addEventListener('click', toggleMenu);
+        navOverlay.addEventListener('click', toggleMenu);
+
+        // Закрытие меню при клике на ссылку
+        const navLinks = document.querySelectorAll('.nav__link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    toggleMenu();
+                }
+            });
+        });
+
+        // Закрытие меню при нажатии Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && mainNav.classList.contains('active')) {
+                toggleMenu();
+            }
+        });
+
+        // Закрытие меню при изменении размера окна (если перешли на десктоп)
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768 && mainNav.classList.contains('active')) {
+                toggleMenu();
+            }
+        });
+
+        // Кнопка "Наверх"
+        const scrollTopButton = document.getElementById('scrollTop');
+
+        // Показываем кнопку после скролла
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollTopButton.classList.add('visible');
+            } else {
+                scrollTopButton.classList.remove('visible');
+            }
+        });
+
+        // Прокрутка к началу страницы
+        scrollTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
 </html>
