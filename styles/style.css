@@ -28,10 +28,7 @@ a {
     text-decoration: none;
     font-weight: 500;
 }
-/*
-p {
-    font-size: 14px;
-}*/
+
 img {
     width: auto;
 
@@ -158,23 +155,18 @@ footer {
 
 .start_layout {
     display: flex;
-    /*justify-content: space-between;*/
-    align-items: center;/**/
+    align-items: center;
     height: 100vh;
 }
 
 h1 {
-    padding-left: /*3.125rem*/ 50px;
+    padding-left: 50px;
     background: rgba(240, 248, 255, 0.75);
     color: var(--primary-color);
-    /*margin-right: 10%;*/
     font-weight: 900;
     display: flex;
     flex-direction: column;
     font-size: 10vw;
-    /*
-    letter-spacing: 1px;
-    max-width: 600px;*/
     position: absolute;
     z-index: 1;
     
@@ -187,7 +179,7 @@ h1 {
 
 .banner {
     height: 100%;
-    position: absolute;/**/    
+    position: absolute;
     right: 0;
     top: 0;
 
@@ -195,9 +187,6 @@ h1 {
 
 #home {
     min-height: 40vh;
-    /*text-align: center; 
-    align-items: center;
-    justify-content: center;*/
 }
 #coffee {
     background: linear-gradient(to right, #415167 0vw, #415167 25vw, transparent 25vw);
@@ -212,20 +201,7 @@ h1 {
 #home, #coffee, #giftsets, #introsets {
     padding: 0rem 3.125rem;
 }
-/*
-.h__title {
 
-    text-align: center;
-    color: var(--primary-color);
-    padding: 3.125rem 0 1.875rem 0;  
-}
-.h__title h2, .h__title h3 {
-    display: block;
-    width: fit-content;
-
-    background-color: rgba(240, 248, 255, 0.75);
-    text-align: center;  /*центрирование текста внутри 
-}*/
 .h__title {
     display: grid;
     justify-items: center;
@@ -244,23 +220,11 @@ h1 {
 }
 
 .home__list {
-    /*display: flex;
-    gap: 30px;
-    justify-content: center;
-    padding-bottom: 50px;*/
-    /*justify-items: center;
-     justify-content: center;
-    align-items: center;*/
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    
     text-align: center;
     gap: 1.5rem;
 }
-
-/*.home__items {
-    display: block;
-}*/
 
 .cards {
     display: flex;
@@ -311,8 +275,6 @@ h1 {
 
 .giftset__container {
     padding: 0 3.125rem 3.125rem 0;
-    /*height: 50%;
-    height: min-content;*/
     display: flex;
     
 }
@@ -321,16 +283,13 @@ h1 {
     align-self: center;
     position: absolute;
     z-index: 1;
-    /*left: 8%;*/
     max-width: 30vw;
 }
 
 .giftset__content {
-    /*max-height: 57vh;*/
     margin-left: 15%;
     padding: 4rem;
     background: white;
-    /*display: flex;*/
 }
 
 .giftset__content-group {
@@ -357,24 +316,11 @@ h1 {
 }
 
 .giftsets__numbers {
-    /*display: flex;
-    flex-direction: column; 
-    justify-content: space-between; 
-    align-items: center;*/
-    /*height: 100%;*/
     display: grid;
     grid-template-rows: repeat(3, 1fr);
-    /*flex-grow: 1!important;
-    align-items: stretch;
-    */
 }
 
 .giftsets__number {
-    /*display: grid;
-    align-self: stretch;
-    align-items: stretch;
-    align-content: stretch;
-    flex-grow: 1;*/
     background: var(--secondary-color);
     padding: 0 2rem;
     height: 100%;
